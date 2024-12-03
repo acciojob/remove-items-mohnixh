@@ -15,3 +15,8 @@ removeColorButton.addEventListener('click', () => {
     alert('No colors to remove!');
   }
 });
+
+// Normalize the value attributes to match the text content
+document.querySelectorAll('#colorSelect option').forEach(option => {
+  option.value = option.textContent.trim();
+});
